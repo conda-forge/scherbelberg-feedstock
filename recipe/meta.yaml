@@ -1,5 +1,5 @@
 {% set name = "scherbelberg" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scherbelberg-{{ version }}.tar.gz
-  sha256: a87fb41eb666a3a5d5b0c1aa2caaa2e10a646c382bb88a4373c997dd1dc2a708
+  sha256: 4eadae83d7f269683c6bbc6fdda964136b8582a16cecaa5be1ad1b51f155ac60
 
 build:
   number: 0
