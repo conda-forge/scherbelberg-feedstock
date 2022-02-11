@@ -1,5 +1,5 @@
 {% set name = "scherbelberg" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scherbelberg-{{ version }}.tar.gz
-  sha256: 4eadae83d7f269683c6bbc6fdda964136b8582a16cecaa5be1ad1b51f155ac60
+  sha256: cbb5534a4612499f95ee3afabfaf9390d7fae982f09bc860500113c9c40ab478
 
 build:
   number: 0
@@ -26,6 +26,7 @@ requirements:
     - dask
     - hcloud
     - pyyaml
+    - tabulate
     - typeguard
 
 test:
