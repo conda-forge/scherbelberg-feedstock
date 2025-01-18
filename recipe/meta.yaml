@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scherbelberg-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scherbelberg-{{ version }}.tar.gz
   sha256: cbb5534a4612499f95ee3afabfaf9390d7fae982f09bc860500113c9c40ab478
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click
     - dask
     - hcloud
@@ -38,6 +38,7 @@ test:
     - scherbelberg --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pleiszenburg/scherbelberg
